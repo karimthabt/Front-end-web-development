@@ -313,7 +313,7 @@ let bodyData = `
     button4.addEventListener("click",function(){
                     $('#exampleModal').modal('hide');
 
-    sheetData.innerHTML+=`
+    sheetData.innerHTML=`
     <div id="titleData" class="btn btn-primary m-1" data-target="#data1" data-toggle="modal">${dataseve[dataseve.length - 1].input1}</div>`
     document.getElementById("titleData").addEventListener("click",function(){
     document.getElementById("body2").innerHTML=bodyData;
