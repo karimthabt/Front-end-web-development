@@ -174,63 +174,63 @@ width: 70%;
     <div class="input-group-prepend">
         <span class="input-group-text">محرر المخالفة</span>
             </div>
-        <input id="input9" type="text" class="form-control ">
+        <input id="input5" type="text" class="form-control ">
 </div>
 
 <div class="input-group mb-2">
     <div class="input-group-prepend">
         <span class="input-group-text">رئيس اللجنه</span>
             </div>
-    <input id="input10" type="text" class="form-control">
+    <input id="input6" type="text" class="form-control">
 </div>
 
 <div class="input-group mb-2">
     <div class="input-group-prepend">
         <span class="input-group-text">المندوب الفني</span>
             </div>
-    <input id="input11" type="text" class="form-control">
+    <input id="input7" type="text" class="form-control">
 </div>
 
 <div class="input-group mb-2">
     <div class="input-group-prepend">
         <span class="input-group-text">تحرير في يوم</span>
             </div>
-    <input id="input12" type="date" class="form-control">
+    <input id="input8" type="date" class="form-control">
 </div>
 
 <div class="input-group mb-2">
     <div class="input-group-prepend">
         <span class="input-group-text">الاحمال</span>
             </div>
-    <input id="input13" type="text" class="form-control">
+    <input id="input9" type="text" class="form-control">
 </div>
 
 <div class="input-group mb-2">
     <div class="input-group-prepend">
         <span class="input-group-text">نوع المخالفة</span>
             </div>
-    <input id="input14" type="text" class="form-control">
+    <input id="input10" type="text" class="form-control">
 </div>
 
 <div class="input-group mb-2">
     <div class="input-group-prepend">
         <span class="input-group-text">رقم حساب العداد</span>
             </div>
-    <input id="input15" type="text" class="form-control">
+    <input id="input11" type="text" class="form-control">
 </div>
 
 <div class="input-group mb-2">
     <div class="input-group-prepend">
         <span class="input-group-text">رقم شاسيه العداد</span>
             </div>
-    <input id="input16" type="text" class="form-control">
+    <input id="input12" type="text" class="form-control">
 </div>
 
 <div class="input-group mb-2">
     <div class="input-group-prepend">
         <span class="input-group-text">ملاحظات</span>
             </div>
-    <input id="input17" type="text" class="form-control">
+    <input id="input13" type="text" class="form-control">
 </div>
 
 
@@ -276,15 +276,15 @@ let input1 = document.getElementById("input1");
 let input2 = document.getElementById("input2");
 let input3 = document.getElementById("input3");
 let input4 = document.getElementById("input4");
+let input5 = document.getElementById("input5");
+let input6 = document.getElementById("input6");
+let input7 = document.getElementById("input7");
+let input8 = document.getElementById("input8");
 let input9 = document.getElementById("input9");
 let input10 = document.getElementById("input10");
 let input11 = document.getElementById("input11");
 let input12 = document.getElementById("input12");
 let input13 = document.getElementById("input13");
-let input14 = document.getElementById("input14");
-let input15 = document.getElementById("input15");
-let input16 = document.getElementById("input16");
-let input17 = document.getElementById("input17");
 let num1 = document.getElementById("num1");
 let num2 = document.getElementById("num2");
 
@@ -299,15 +299,15 @@ let bodyData = `
         <p>رقم الموبايل: ${dataseve[dataseve.length - 1].input4}</p>
         <p>نوع النشاط: ${dataseve[dataseve.length - 1].select1}</p>
         <p>صفة المنتفع: ${dataseve[dataseve.length - 1].select2}</p>
-        <p>محرر المخالفة: ${dataseve[dataseve.length - 1].input9}</p>
-        <p>رئيس اللجنة: ${dataseve[dataseve.length - 1].input10}</p>
-        <p>المندوب الفني: ${dataseve[dataseve.length - 1].input10}</p>
-        <p>تحرير في يوم: ${dataseve[dataseve.length - 1].input10}</p>
-        <p>الاحمال: ${dataseve[dataseve.length - 1].input11}</p>
-        <p>نوع المخالفة: ${dataseve[dataseve.length - 1].input12}</p>
-        <p>رقم حساب العداد: ${dataseve[dataseve.length - 1].input13}</p>
-        <p>رقم شاسيه العداد: ${dataseve[dataseve.length - 1].input14}</p>
-        <p>ملاحظات: ${dataseve[dataseve.length - 1].input15}</p>
+        <p>محرر المخالفة: ${dataseve[dataseve.length - 1].input5}</p>
+        <p>رئيس اللجنة: ${dataseve[dataseve.length - 1].input6}</p>
+        <p>المندوب الفني: ${dataseve[dataseve.length - 1].input7}</p>
+        <p>تحرير في يوم: ${dataseve[dataseve.length - 1].input8}</p>
+        <p>الاحمال: ${dataseve[dataseve.length - 1].input9}</p>
+        <p>نوع المخالفة: ${dataseve[dataseve.length - 1].input10}</p>
+        <p>رقم حساب العداد: ${dataseve[dataseve.length - 1].input11}</p>
+        <p>رقم شاسيه العداد: ${dataseve[dataseve.length - 1].input12}</p>
+        <p>ملاحظات: ${dataseve[dataseve.length - 1].input13}</p>
     `;
     document.getElementById("body1").innerHTML=bodyData;
     button4.addEventListener("click",function(){
@@ -332,22 +332,22 @@ function sendWhatsappMessage(message) {
 
 function send() {
     const messageText = `
-بيانات المحضر
-السيد: ${dataseve[dataseve.length - 1].input1}
-بطاقة رقم القومي: ${dataseve[dataseve.length - 1].input2}
-العنوان: ${dataseve[dataseve.length - 1].input3}
-رقم الموبايل: ${dataseve[dataseve.length - 1].input4}
-نوع النشاط: ${dataseve[dataseve.length - 1].select1}
-صفة المنتفع: ${dataseve[dataseve.length - 1].select2}
-محرر المخالفة: ${dataseve[dataseve.length - 1].input9}
-رئيس اللجنة: ${dataseve[dataseve.length - 1].input10}
-المندوب الفني: ${dataseve[dataseve.length - 1].input10}
-تحرير في يوم: ${dataseve[dataseve.length - 1].input10}
-الاحمال: ${dataseve[dataseve.length - 1].input11}
-نوع المخالفة: ${dataseve[dataseve.length - 1].input12}
-رقم حساب العداد: ${dataseve[dataseve.length - 1].input13}
-رقم شاسيه العداد: ${dataseve[dataseve.length - 1].input14}
-ملاحظات: ${dataseve[dataseve.length - 1].input15}
+        بيانات المحضر
+        السيد: ${dataseve[dataseve.length - 1].input1}<
+        بطاقة رقم القومي: ${dataseve[dataseve.length - 1].input2}
+        العنوان: ${dataseve[dataseve.length - 1].input3}
+        رقم الموبايل: ${dataseve[dataseve.length - 1].input4}
+        نوع النشاط: ${dataseve[dataseve.length - 1].select1}
+        صفة المنتفع: ${dataseve[dataseve.length - 1].select2}
+        محرر المخالفة: ${dataseve[dataseve.length - 1].input5}
+        رئيس اللجنة: ${dataseve[dataseve.length - 1].input6}
+        المندوب الفني: ${dataseve[dataseve.length - 1].input7}
+        تحرير في يوم: ${dataseve[dataseve.length - 1].input8}
+        الاحمال: ${dataseve[dataseve.length - 1].input9}
+        نوع المخالفة: ${dataseve[dataseve.length - 1].input10}
+        رقم حساب العداد: ${dataseve[dataseve.length - 1].input11}
+        رقم شاسيه العداد: ${dataseve[dataseve.length - 1].input12}
+        ملاحظات: ${dataseve[dataseve.length - 1].input13}
     `;
     sendWhatsappMessage(messageText);
 }
@@ -388,15 +388,15 @@ button3.addEventListener("click", function() {
         input4: input4.value,
         select1: select1.value, 
         select2: select2.value, 
+        input5: input5.value,
+        input6: input6.value,
+        input7: input7.value,
+        input8: input8.value,
         input9: input9.value,
         input10: input10.value,
         input11: input11.value,
         input12: input12.value,
         input13: input13.value,
-        input14: input14.value,
-        input15: input15.value,
-        input16: input16.value,
-        input17: input17.value,
     };
     dataseve.push(data);
     showData();
@@ -412,15 +412,15 @@ function removeData() {
     input4.value = "";
     select1.value = "";
     select2.value = "";
+    input5.value = "";
+    input6.value = "";
+    input7.value = "";
+    input8.value = "";
     input9.value = "";
     input10.value = "";
     input11.value = "";
     input12.value = "";
     input13.value = "";
-    input14.value = "";
-    input15.value = "";
-    input16.value = "";
-    input17.value = "";
 }
 //======================================================================================//
 
