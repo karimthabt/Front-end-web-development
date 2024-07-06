@@ -223,7 +223,7 @@ width: 70%;
     <div class="input-group-prepend">
         <span class="input-group-text">رقم شاسيه العداد</span>
             </div>
-    <input id="input16" type="text" class="form-control">
+    <input id="input16" type="number" class="form-control">
 </div>
 
 <div class="input-group mb-2">
@@ -292,23 +292,23 @@ let num2 = document.getElementById("num2");
 function showData() {
 
 let bodyData = `
-        <p class="text-center">بيانات المحضر</p>
-        <p>السيد: ${dataseve[dataseve.length - 1].input1}</p>  
-        <p>بطاقة رقم القومي: ${dataseve[dataseve.length - 1].input2}</p>
-        <p>العنوان: ${dataseve[dataseve.length - 1].input3}</p>
-        <p>رقم الموبايل: ${dataseve[dataseve.length - 1].input4}</p>
-        <p>نوع النشاط: ${dataseve[dataseve.length - 1].select1}</p>
-        <p>صفة المنتفع: ${dataseve[dataseve.length - 1].select2}</p>
-        <p>محرر المخالفة: ${dataseve[dataseve.length - 1].input9}</p>
-        <p>رئيس اللجنة: ${dataseve[dataseve.length - 1].input10}</p>
-        <p>المندوب الفني: ${dataseve[dataseve.length - 1].input10}</p>
-        <p>تحرير في يوم: ${dataseve[dataseve.length - 1].input10}</p>
-        <p>الاحمال: ${dataseve[dataseve.length - 1].input11}</p>
-        <p>نوع المخالفة: ${dataseve[dataseve.length - 1].input12}</p>
-        <p>رقم حساب العداد: ${dataseve[dataseve.length - 1].input13}</p>
-        <p>رقم شاسيه العداد: ${dataseve[dataseve.length - 1].input14}</p>
-        <p>ملاحظات: ${dataseve[dataseve.length - 1].input15}</p>
-    `;
+<p class="text-center">بيانات المحضر</p>
+<p>السيد: ${dataseve[dataseve.length - 1].input1}</p>  
+<p>بطاقة رقم القومي: ${dataseve[dataseve.length - 1].input2}</p>
+<p>العنوان: ${dataseve[dataseve.length - 1].input3}</p>
+<p>رقم الموبايل: ${dataseve[dataseve.length - 1].input4}</p>
+<p>نوع النشاط: ${dataseve[dataseve.length - 1].select1}</p>
+<p>صفة المنتفع: ${dataseve[dataseve.length - 1].select2}</p>
+<p>محرر المخالفة: ${dataseve[dataseve.length - 1].input9}</p>
+<p>رئيس اللجنة: ${dataseve[dataseve.length - 1].input10}</p>
+<p>المندوب الفني: ${dataseve[dataseve.length - 1].input10}</p>
+<p>تحرير في يوم: ${dataseve[dataseve.length - 1].input10}</p>
+<p>الاحمال: ${dataseve[dataseve.length - 1].input11}</p>
+<p>نوع المخالفة: ${dataseve[dataseve.length - 1].input12}</p>
+<p>رقم حساب العداد: ${dataseve[dataseve.length - 1].input13}</p>
+<p>رقم شاسيه العداد: ${dataseve[dataseve.length - 1].input14}</p>
+<p>ملاحظات: ${dataseve[dataseve.length - 1].input15}</p>
+`;
     document.getElementById("body1").innerHTML=bodyData;
     button4.addEventListener("click",function(){
                     $('#exampleModal').modal('hide');
@@ -348,7 +348,7 @@ function send() {
 رقم حساب العداد: ${dataseve[dataseve.length - 1].input13}
 رقم شاسيه العداد: ${dataseve[dataseve.length - 1].input14}
 ملاحظات: ${dataseve[dataseve.length - 1].input15}
-    `;
+`;
     sendWhatsappMessage(messageText);
 }
 
