@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <title>شركة الكهرباء</title>
+</head>
+<style>
+#button1,#button2{
+    width: 15rem;
+}
+#Search{
+width: 70%;
+}
+</style>
+<body >
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light ">
+        <div href="" class="navbar-brand " > مصر الوسطي للكهرباء</div>
+            <a href="#x" class="navbar-toggler" data-toggle="collapse">
+                <span  class="navbar-toggler-icon "></span>
+</a>
+        <div id="x" class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link">تسجيل محاضر</a></li>
+
+
+
+
+<li class="nav-item"><a class="nav-link" data-toggle="modal" data-target="#A2">عرض محاضر</a></li>
+<div class="modal fade" id="A2" tabindex="-1">
+    <div class="modal-dialog m-1.75rem">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">عرض المحاضر</h5>
+                <div class="close">
+                <span aria-hidden="true" data-dismiss="modal" aria-label="Close">&times;</span>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+
+                    <div id="sheetData" class="col-1 text-center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="data1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">بيانات المحضر</h5>
+        <div class="close " data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </div>
+      </div>
+
+<div id="body2" class="modal-body text-right">
+    <div id="titleData" class="btn btn-primary m-1" data-target="#data1" data-toggle="modal"></div>
+
+      </div>
+      <div class="modal-footer">
+        <button id="button5" type="button" class="btn btn-primary m-1 w-100"> مشاركة البيانات</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<li class="nav-item"><a class="nav-link">اسعار الاحمال</a> </li>
+
+<li class="nav-item"><a class="nav-link" data-toggle="modal" data-target="#A1">اسعار الشرائح</a> </li>
+<div class="modal fade" id="A1" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">اسعار الشرائح</h5>
+                <div class="close">
+                    <span aria-hidden="true" data-dismiss="modal" aria-label="Close">&times;</span>
+                </div>
+            </div>
+            <div class="modal-body text-right">
+            <h4 class="text-center">شرائح الاستهلاك المنزلي للكهرباء </h4>
+                <p>الشريحة الأولى: من 0 إلى 50 كيلوواط زيادتها 58 قرشا</p>
+                <p>الشريحة الثانية: من 51 إلى 100 كيلوواط زيادتها 68 قرشًا </p>
+                <p>الشريحة الثالثة: 0 إلى 200 كيلوواط زيادتها 83 قرشا   </p>
+                <p>الشريحة الرابعة: 201 إلى 350 كيلوواط زيادتها 125 قرشًا</p>
+                <p>الشريحة الخامسة: 351 إلى 650 كيلوواط زيادتها 140 قرشًا</p>
+                <p>الشريحة السادسة: من 0 إلى أقل من 1000 كيلوواط زيادتها 150 قرشًا</p>
+                <p>الشريحة السابعة من 0 لأكثر من ألف كيلوواط زيادتها 165 قرشًا</p>
+            <h4 class="text-center">شرائح الكهرباء للمحالّ التجارية </h4>
+                <p>الشريحة الأولى: من 0 إلى 100 كيلوواط 65 قرشًا عند المستويات نفسها</p>
+                <p>الشريحة الثانية: من 101 إلى 250 كيلوواط 136 قرشًا</p>
+                <p>الشريحة الثالثة: من 0 إلى 250 كيلوواط 150 قرشًا</p>
+                <p>الشريحة الرابعة: من 601 إلى 1000 كيلوواط 165 قرشًا</p>
+                <p>الشريحة الخامسة: من 0 لأكثر من 1000 كيلوواط 180 قرشًا</p>
+            </div>
+            <div class="modal-footer"></div>
+        </div>
+    </divc>
+</div>
+</ul>
+    <form class="form-inline my-2 my-lg-0">
+            <input id="Search" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+</div>
+
+</nav>
+<br>
+
+<div class="container p-3  " style="direction: rtl;">
+    <h5 class="text-center">تسجيل محاضر</h5>
+    <div class="input-group mb-2">
+        <div class="input-group-prepend">
+            <span class="input-group-text">الاسم</span>
+        </div>
+        <input id="input1" type="text" class="form-control">
+    </div>
+
+<div class="input-group mb-2">
+    <div class="input-group-prepend">
+        <span class="input-group-text">بطاقة رقم القومي </span>
+        <span id="num1" class="input-group-text">0/14</span>
+    </div>
+    <input id="input2" type="number" class="form-control">
+</div>
+
+<div class="input-group  mb-2">
+    <div class="input-group-prepend">
+        <span class="input-group-text">العنوان</span>
+    </div>
+    <input id="input3" type="text" class="form-control">
+</div>
+
+<div class="input-group mb-2">
+    <div class="input-group-prepend">
+        <span class="input-group-text">رقم الموبايل</span>
+        <span id="num2" class="input-group-text">0/11</span>
+    </div>
+    <input id="input4" type="number" class="form-control">
+</div>
+
+<div class="row">
+<div class="col-sm-3 col-lg-6 col-md-12 mb-2 ">
+<div class="input-group">
+    <div class="input-group-prepend">
+        <span class="input-group-text">نوع النشاط</span>
+    </div>
+    <select class="btn btn-primary bg-light text-dark" id="select1">
+        <option class="text-dark">منزلي</option>
+        <option class="text-dark">تجاري</option>
+</select>
+</div>
+</div>
+
+<div class="col-sm-3 col-lg-6 col-md-12 mb-2 ">
+<div class="input-group mb-2">
+    <div class="input-group-prepend">
+        <span class="input-group-text">صفة المنتفع</span>
+    </div>
+    <select class="btn btn-primary bg-light text-dark" id="select2">
+        <option class="text-dark">مالك</option>
+        <option class="text-dark">مستأجر</option>
+</select>
+</div>
+</div>
+
+</div>
+
+<div class="input-group mb-2">
+    <div class="input-group-prepend">
+        <span class="input-group-text">محرر المخالفة</span>
+            </div>
+        <input id="input9" type="text" class="form-control ">
+</div>
+
+<div class="input-group mb-2">
+    <div class="input-group-prepend">
+        <span class="input-group-text">رئيس اللجنه</span>
+            </div>
+    <input id="input10" type="text" class="form-control">
+</div>
+
+<div class="input-group mb-2">
+    <div class="input-group-prepend">
+        <span class="input-group-text">المندوب الفني</span>
+            </div>
+    <input id="input11" type="text" class="form-control">
+</div>
+
+<div class="input-group mb-2">
+    <div class="input-group-prepend">
+        <span class="input-group-text">تحرير في يوم</span>
+            </div>
+    <input id="input12" type="date" class="form-control">
+</div>
+
+<div class="input-group mb-2">
+    <div class="input-group-prepend">
+        <span class="input-group-text">الاحمال</span>
+            </div>
+    <input id="input13" type="text" class="form-control">
+</div>
+
+<div class="input-group mb-2">
+    <div class="input-group-prepend">
+        <span class="input-group-text">نوع المخالفة</span>
+            </div>
+    <input id="input14" type="text" class="form-control">
+</div>
+
+<div class="input-group mb-2">
+    <div class="input-group-prepend">
+        <span class="input-group-text">رقم حساب العداد</span>
+            </div>
+    <input id="input15" type="text" class="form-control">
+</div>
+
+<div class="input-group mb-2">
+    <div class="input-group-prepend">
+        <span class="input-group-text">رقم شاسيه العداد</span>
+            </div>
+    <input id="input16" type="text" class="form-control">
+</div>
+
+<div class="input-group mb-2">
+    <div class="input-group-prepend">
+        <span class="input-group-text">ملاحظات</span>
+            </div>
+    <input id="input17" type="text" class="form-control">
+</div>
+
+
+<button id="button3" type="button" class="btn btn-primary w-100" data-toggle="modal" data-target="#exampleModal">حفظ</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">بيانات المحضر</h5>
+        <div class="close " data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </div>
+      </div>
+
+<div id="body1" class="modal-body text-right"></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">الغاء الحفظ</button>
+        <button id="button4" type="button" class="btn btn-primary m-1"> حفظ البيانات</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+</body>
+<script src="js/popper.min.js"></script>
+<script src="js/jquery-3.7.1.js"></script>
+<script src="js/bootstrap.js"></script>
+
+</html>
+<script>
+let button1 = document.getElementById("button1");
+let button3 = document.getElementById("button3");
+let button4 = document.getElementById("button4");
+let button5 = document.getElementById("button5");
+let sheetData = document.getElementById("sheetData");
+let dataseve = []; 
+let select1 = document.getElementById("select1");
+let select2 = document.getElementById("select2");
+let input1 = document.getElementById("input1");
+let input2 = document.getElementById("input2");
+let input3 = document.getElementById("input3");
+let input4 = document.getElementById("input4");
+let input9 = document.getElementById("input9");
+let input10 = document.getElementById("input10");
+let input11 = document.getElementById("input11");
+let input12 = document.getElementById("input12");
+let input13 = document.getElementById("input13");
+let input14 = document.getElementById("input14");
+let input15 = document.getElementById("input15");
+let input16 = document.getElementById("input16");
+let input17 = document.getElementById("input17");
+let num1 = document.getElementById("num1");
+let num2 = document.getElementById("num2");
+
+
+function showData() {
+
+let bodyData = `
+        <p class="text-center">بيانات المحضر</p>
+        <p>السيد: ${dataseve[dataseve.length - 1].input1}</p>  
+        <p>بطاقة رقم القومي: ${dataseve[dataseve.length - 1].input2}</p>
+        <p>العنوان: ${dataseve[dataseve.length - 1].input3}</p>
+        <p>رقم الموبايل: ${dataseve[dataseve.length - 1].input4}</p>
+        <p>نوع النشاط: ${dataseve[dataseve.length - 1].select1}</p>
+        <p>صفة المنتفع: ${dataseve[dataseve.length - 1].select2}</p>
+        <p>محرر المخالفة: ${dataseve[dataseve.length - 1].input9}</p>
+        <p>رئيس اللجنة: ${dataseve[dataseve.length - 1].input10}</p>
+        <p>المندوب الفني: ${dataseve[dataseve.length - 1].input10}</p>
+        <p>تحرير في يوم: ${dataseve[dataseve.length - 1].input10}</p>
+        <p>الاحمال: ${dataseve[dataseve.length - 1].input11}</p>
+        <p>نوع المخالفة: ${dataseve[dataseve.length - 1].input12}</p>
+        <p>رقم حساب العداد: ${dataseve[dataseve.length - 1].input13}</p>
+        <p>رقم شاسيه العداد: ${dataseve[dataseve.length - 1].input14}</p>
+        <p>ملاحظات: ${dataseve[dataseve.length - 1].input15}</p>
+    `;
+    document.getElementById("body1").innerHTML=bodyData;
+    button4.addEventListener("click",function(){
+                    $('#exampleModal').modal('hide');
+
+    sheetData.innerHTML=`
+    <div id="titleData" class="btn btn-primary m-1" data-target="#data1" data-toggle="modal">${dataseve[dataseve.length - 1].input1}</div>`
+    document.getElementById("titleData").addEventListener("click",function(){
+    document.getElementById("body2").innerHTML=bodyData;
+
+    })
+})
+
+
+
+}
+function sendWhatsappMessage(message) {
+    const whatsappLink = `https://wa.me/?text=${encodeURIComponent(message)}`;
+    window.open(whatsappLink, "_blank");
+
+}
+
+function send() {
+    const messageText = `
+بيانات المحضر
+السيد: ${dataseve[dataseve.length - 1].input1}
+بطاقة رقم القومي: ${dataseve[dataseve.length - 1].input2}
+العنوان: ${dataseve[dataseve.length - 1].input3}
+رقم الموبايل: ${dataseve[dataseve.length - 1].input4}
+نوع النشاط: ${dataseve[dataseve.length - 1].select1}
+صفة المنتفع: ${dataseve[dataseve.length - 1].select2}
+محرر المخالفة: ${dataseve[dataseve.length - 1].input9}
+رئيس اللجنة: ${dataseve[dataseve.length - 1].input10}
+المندوب الفني: ${dataseve[dataseve.length - 1].input10}
+تحرير في يوم: ${dataseve[dataseve.length - 1].input10}
+الاحمال: ${dataseve[dataseve.length - 1].input11}
+نوع المخالفة: ${dataseve[dataseve.length - 1].input12}
+رقم حساب العداد: ${dataseve[dataseve.length - 1].input13}
+رقم شاسيه العداد: ${dataseve[dataseve.length - 1].input14}
+ملاحظات: ${dataseve[dataseve.length - 1].input15}
+    `;
+    sendWhatsappMessage(messageText);
+}
+
+button5.addEventListener("click", function() {
+send(); });
+
+
+//======================================================================================//
+input2.addEventListener("input", function() {
+    const elenumber1 = 14; 
+    const elenumber2 = input2.value.length;
+    num1.innerHTML = `${elenumber2}/${elenumber1}`;
+    
+    if (elenumber2 > elenumber1) {
+        input2.value = input2.value.slice(0, elenumber1);
+        num1.innerHTML = `${elenumber1}/${elenumber1}`;
+    }
+});
+//======================================================================================//
+input4.addEventListener("input", function() {
+    const elenumber3 = 11; 
+    let elenumber4 = input4.value.length; 
+    num2.innerHTML = `${elenumber4}/${elenumber3}`;
+    
+    if (elenumber4 > elenumber3) {
+        input4.value = input4.value.slice(0, elenumber3); 
+        elenumber4 = elenumber3; 
+        num2.innerHTML = `${elenumber4}/${elenumber3}`;
+    }
+});
+//======================================================================================//
+button3.addEventListener("click", function() {
+    let data = {
+        input1: input1.value,
+        input2: input2.value,   
+        input3: input3.value,
+        input4: input4.value,
+        select1: select1.value, 
+        select2: select2.value, 
+        input9: input9.value,
+        input10: input10.value,
+        input11: input11.value,
+        input12: input12.value,
+        input13: input13.value,
+        input14: input14.value,
+        input15: input15.value,
+        input16: input16.value,
+        input17: input17.value,
+    };
+    dataseve.push(data);
+    showData();
+    removeData();
+    console.log(dataseve);
+
+});
+//======================================================================================//
+function removeData() {
+    input1.value = "";
+    input2.value = "";
+    input3.value = "";
+    input4.value = "";
+    select1.value = "";
+    select2.value = "";
+    input9.value = "";
+    input10.value = "";
+    input11.value = "";
+    input12.value = "";
+    input13.value = "";
+    input14.value = "";
+    input15.value = "";
+    input16.value = "";
+    input17.value = "";
+}
+//======================================================================================//
+
+
+</script>
+</script>
